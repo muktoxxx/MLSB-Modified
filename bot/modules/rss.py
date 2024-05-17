@@ -727,7 +727,7 @@ async def rssMonitor():
                         feed_msg = " ".join(cmd).lstrip("/")
                         if "|" in config_dict["RSS_CHAT"]:
                             if not feed_msg.startswith("@"):
-                                feed_msg = f"@{bot_name}/{feed_msg}"
+                                feed_msg = f"@<b>mlsb_bot</b>/{feed_msg}"
                         else:
                             feed_msg = f"/{feed_msg}"
                     else:
