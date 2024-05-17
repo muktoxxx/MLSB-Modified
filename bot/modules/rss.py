@@ -733,9 +733,6 @@ async def rssMonitor():
                     else:
                         feed_msg = f"<b>Name: </b><copy>{item_title.replace('>', '').replace('<', '')}</copy>\n\n"
                         feed_msg += f"<b>Link: </b><copy>{url}</copy>"
-                    feed_msg += (
-                        f"\n<b>Tag: </b><copy>{data['tag']}</copy> <copy>{user}</copy>"
-                    )
                     await sendRss(feed_msg)
                     feed_count += 1
                 async with rss_dict_lock:
